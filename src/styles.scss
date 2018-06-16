@@ -2,6 +2,45 @@
 $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 
-h1{
-  color: green;
+// font
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC';
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+// basic style variable setting
+$deepPurple:#7828B4;
+$lightPurple:#9013FE;
+$grayL1:#f2f2f2;
+$grayL2:#ebebeb;
+$grayL3:#d7d7d7;
+$grayL4:#9b9b9b;
+$white:#FFFFFF;
+$black:#000000;
+
+@mixin title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@mixin  title2 {
+  font-weight: bold;
+  font-size: 36px
+}
+
+@mixin subtitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@mixin placeholder {
+  font-size: 20px;
+}
+
+@mixin lable {
+  font-style: italic;
 }
