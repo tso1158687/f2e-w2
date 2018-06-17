@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import {Activity} from '../model/data';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  data: any;
+  data: Activity;
   constructor(
     private service: DataService
   ) { }
@@ -15,8 +16,9 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.service.getData()
     .subscribe(p => {
-     this.data = p;
-     console.log(p);
+      // console.log(p);
+     this.data = p.result.records;
+     console.log(this.data);
     });
   }
 

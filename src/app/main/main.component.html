@@ -1,3 +1,11 @@
-<p>
-  main works!
-</p>
+<div class="activity" *ngFor="let item of data">
+  <!-- <div class="pic"> -->
+    <img [src]="item.Picture1" [alt]="item.Picdescribe1">
+  <!-- </div> -->
+  <div class="content">
+    <div class="title">{{item.Name}}</div>
+    <div class="desc">{{item.Toldescribe}}</div>
+    <div class="cate"></div>
+    <div class="info"></div>
+  </div>
+</div>
