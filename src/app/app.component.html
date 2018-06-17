@@ -6,11 +6,20 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <i class="fa fa-search" aria-hidden="true"></i>
+    <i class="fa fa-search" aria-hidden="true"></i>
     <form class="form-inline mx-auto">
       <input class="form-control mr-sm-2" type="search" placeholder="探索我的活動" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
-<app-main></app-main>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+    <app-filter></app-filter>
+    </div>
+    <div class="col-md-9">
+      <app-main></app-main>
+    </div>
+  </div>
+</div>

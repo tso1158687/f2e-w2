@@ -19,9 +19,9 @@ export class MainComponent implements OnInit {
         // console.log(p);
         p.result.records.forEach(e => {
           if (e.Ticketinfo.length === 0) {
-            e.Ticketinfo = '問問BJ大豬豬阿';
+            e.Ticketinfo = '未提供';
           }
-        })
+        });
         this.data = p.result.records;
         console.log(this.data);
       });
