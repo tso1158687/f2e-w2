@@ -1,0 +1,21 @@
+<div class="activity">
+  <div class="pic">
+    <img [src]="activity.Picture1" [alt]="activity.Picdescribe1">
+  </div>
+  <div class="content">
+    <div class="title">{{activity.Name}}</div>
+    <div class="desc">{{activity.Toldescribe}}</div>
+    <div class="cate">
+      <span>門票說明</span>
+      <span>{{activity.Ticketinfo}}</span>
+    </div>
+    <div class="info">
+      <span class="location">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>{{activity.Zone}}
+      </span>
+      <span class="date">
+        <i class="fa fa-calendar" aria-hidden="true"></i>{{activity.Opentime}}
+      </span>
+    </div>
+  </div>
+</div>

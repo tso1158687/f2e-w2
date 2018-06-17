@@ -1,4 +1,4 @@
-<div class="activity" *ngFor="let item of data">
+<div class="activity" *ngFor="let item of data" routerLink="/activity/{{item._id}}">
   <div class="pic">
     <img [src]="item.Picture1" [alt]="item.Picdescribe1">
   </div>
