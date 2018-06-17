@@ -1,11 +1,24 @@
-<div class="activity" *ngFor="let item of data">
-  <!-- <div class="pic"> -->
-    <img [src]="item.Picture1" [alt]="item.Picdescribe1">
-  <!-- </div> -->
-  <div class="content">
-    <div class="title">{{item.Name}}</div>
-    <div class="desc">{{item.Toldescribe}}</div>
-    <div class="cate"></div>
-    <div class="info"></div>
+<div class="container">
+
+  <div class="activity" *ngFor="let item of data">
+    <div class="pic">
+      <img [src]="item.Picture1" [alt]="item.Picdescribe1">
+    </div>
+    <div class="content">
+      <div class="title">{{item.Name}}</div>
+      <div class="desc">{{item.Toldescribe}}</div>
+      <div class="cate">
+        <span>門票說明</span>
+        <span>{{item.Ticketinfo}}</span>
+      </div>
+      <div class="info">
+        <span class="location">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>{{item.Zone}}
+        </span>
+        <span class="date">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>{{item.Opentime}}
+        </span>
+      </div>
+    </div>
   </div>
 </div>
