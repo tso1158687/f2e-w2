@@ -1,7 +1,13 @@
 <div class="filter-container">
   <div class="location">
-    地點
-    <div class="dropdown">
+    <div class='title'>地點</div>
+    <div class='button'>
+      <div class="button-container" *ngFor="let dist of districts">
+        <button type="button" class="btn btn-info" (click)="applyFilter(dist)" >{{dist}}</button>
+      </div>
+    </div>
+    <!-- <button type="button" class="btn btn-info" *ngFor="let dist of districts">{{dist}}</button> -->
+    <!-- <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         Dropdown button
@@ -11,6 +17,6 @@
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
