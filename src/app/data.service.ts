@@ -8,6 +8,7 @@ import { Observable, of } from 'rxjs';
 export class DataService {
   data: any;
   list: any;
+  filterKeyword = '';
   private url = 'https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97';
   constructor(
     private http: HttpClient
@@ -15,7 +16,11 @@ export class DataService {
   getData (): Observable<any> {
     this.data = this.http.get(this.url);
     console.log(this.data);
+    console.log(this.filterKeyword);
     return this.data;
+  }
+  getFilterKeyword() {
+    return this.filterKeyword;
   }
   // getActivity(id: number): Observable<any> {
   //   console.log(id);

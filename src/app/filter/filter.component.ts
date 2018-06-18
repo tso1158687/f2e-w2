@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-filter',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
-  districts: any;
-  constructor() {}
+  districts: string[];
+  filter: string;
+  @Output() outputFilter = new EventEmitter();
+  constructor(
+    private service: DataService,
+  ) {
+    this.filter = '';
+
+  }
 
   ngOnInit() {
     this.districts = [
@@ -53,5 +61,7 @@ export class FilterComponent implements OnInit {
   }
   applyFilter(dist) {
     console.log(dist);
+    // this.outputFilter.emit(dist);
+    this.service.filterKeyword = dist;
   }
 }

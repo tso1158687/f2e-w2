@@ -9,14 +9,17 @@ import { Activity } from '../model/data';
 })
 export class MainComponent implements OnInit {
   data: Activity;
+  filterKeyword: any;
   constructor(
-    private service: DataService
+    private service: DataService,
   ) { }
 
   ngOnInit() {
     this.service.getData()
       .subscribe(p => {
         // console.log(p);
+        this.filterKeyword = this.service.getFilterKeyword();
+        console.log(this.filterKeyword);
         p.result.records.forEach(e => {
           if (e.Ticketinfo.length === 0) {
             e.Ticketinfo = '未提供';
@@ -25,6 +28,7 @@ export class MainComponent implements OnInit {
         this.data = p.result.records;
         console.log(this.data);
       });
+
   }
 
 }
